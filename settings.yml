@@ -54,3 +54,4 @@ auth:
   providers: [local]
   local:
     enableRegistration: true
+    salt: LbFa668alfiS0EetJ1BhZ60Wrj7xRs3M
