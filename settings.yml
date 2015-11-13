@@ -1,0 +1,56 @@
+#
+# Let's Chat Settings
+#
+# See defaults.yml for all available options
+#
+
+env: production # development / production
+
+http:
+  enable: true
+  host: 'localhost'
+  port: 5000
+
+https:
+  enable: false
+  port: 5001
+  key: key.pem
+  cert: certificate.pem
+
+files:
+  enable: true
+  provider: local
+  maxFileSize: 100000000
+  restrictTypes: false  
+  local:
+    dir: uploads
+
+xmpp:
+  enable: false
+  port: 5222
+  domain: example.com
+
+database:
+  uri: mongodb://localhost/letschat
+
+secrets:
+  cookie: 3BT8DiO2W7UTp25p7CO03F2M1m6yezIJ
+  
+ noRobots: true # Serve robots.txt with disallow
+
+giphy:
+  enable: true
+  rating: r
+  limit: 24
+  apiKey: dc6zaTOxFJmzC
+
+rooms:
+  private: true 
+
+auth:
+  throttling:
+    enable: true
+    threshold: 3
+  providers: [local]
+  local:
+    enableRegistration: true
